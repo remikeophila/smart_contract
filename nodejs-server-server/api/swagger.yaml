@@ -1,0 +1,72 @@
+---
+swagger: "2.0"
+info:
+  description: "DTM Smart Contract"
+  version: "1.0.0"
+  title: "DTM Smart Contract"
+  termsOfService: ""
+  contact:
+    email: "adrien.lemoigne@docusign.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/api"
+tags:
+- name: "Create Docusign Document"
+  description: ""
+schemes:
+- "http"
+paths:
+  /create:
+    post:
+      tags:
+      - "POST Contract"
+      summary: "Create contract"
+      description: "Create Contracts"
+      operationId: "createContract"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "New Contract"
+        description: "Create Contract object "
+        required: true
+        schema:
+          $ref: "#/definitions/Contract"
+      responses:
+        200:
+          description: "Operation successful"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Contract not found"
+        405:
+          description: "Validation exception"
+      x-swagger-router-controller: "POSTContract"
+definitions:
+  Seller:
+    type: "object"
+    properties:
+      _id:
+        type: "string"
+      enterprise:
+        type: "string"
+  Customer:
+    type: "object"
+    properties:
+      _id:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+  Contract:
+    type: "object"
+    properties:
+      seller:
+        $ref: "#/definitions/Seller"
+      customer:
+        $ref: "#/definitions/Customer"

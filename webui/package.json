@@ -1,0 +1,19 @@
+{
+  "name": "dtm-smart-contract",
+  "version": "1.0.0",
+  "description": "DTM Smart Contract",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "client-http": "0.0.7",
+    "jsonwebtoken": "^8.1.1"
+  }
+}
