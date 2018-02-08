@@ -8,13 +8,28 @@
     "start": "node index.js"
   },
   "keywords": [
-    "swagger"
+    "swagger",
+    "web3",
+    "0.20.2"
   ],
   "license": "Unlicense",
   "private": true,
   "dependencies": {
+    "bignumber.js": "^6.0.0",
+    "body-parser": "^1.18.2",
     "connect": "^3.2.0",
+    "express": "^4.16.2",
     "js-yaml": "^3.3.0",
-    "swagger-tools": "0.10.1"
+    "swagger-tools": "0.10.1",
+    "web3": "0.20.2",
+    "colors": "^1.1.2",
+    "commander": "^2.12.2",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.3",
+    "node-ask": "^1.0.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
   }
 }
